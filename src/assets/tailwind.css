@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.test-tailwind {
+    @apply bg-red-500 text-white;
+}
+  
