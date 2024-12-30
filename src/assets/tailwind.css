@@ -1,8 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.test-tailwind {
-    @apply bg-red-500 text-white;
-}
   
+.material-symbols-outlined {
+    @apply select-none;
+}
+
+/* Sidemenu */
+.sidemenu .sidemenu-item.active {
+    @apply bg-[#e76127] text-white hover:bg-[#d55923];
+}
+
+.sidemenu .sidemenu-item:hover:not(.active) {
+    @apply hover:bg-[#eeeeee];
+}
