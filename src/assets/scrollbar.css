@@ -19,3 +19,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+#settings-page-list::-webkit-scrollbar-thumb {
+  border: 3px solid #ececec;
+}

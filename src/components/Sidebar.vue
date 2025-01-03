@@ -13,23 +13,21 @@
         </div>
         <div class="p-4 py-1 flex gap-2">
             <button class="flex-grow bg-gray-200 rounded-md flex items-center justify-center p-2"><span
-                    class="material-symbols-outlined">sync</span></button>
-            <button onclick="closeSidebar()"
+                    class="material-symbols-outlined">save</span></button>
+            <button @click="openSettings"
                 class="flex-grow toggle-settings bg-gray-200 rounded-md flex items-center justify-center p-2"><span
                     class="material-symbols-outlined">settings</span></button>
-            <button class="flex-grow bg-gray-200 rounded-md flex items-center justify-center p-2"><span
-                    class="material-symbols-outlined">local_activity</span></button>
         </div>
         <ul class="m-4 space-y-2">
             <!-- <li>
             <button onclick="toggleTheme()"
                 class="block px-4 py-2 text-gray-600 hover:bg-gray-200 hover:text-gray-900">Dark Mode</button>
         </li> -->
-            <li>
+            <!-- <li>
                 <a href="#"
                     class="block flex items-center gap-2 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 hover:text-gray-900"><span
                         class="material-symbols-outlined">inbox</span> Your PaperSpace</a>
-            </li>
+            </li> -->
             <li>
                 <a href="#"
                     class="block flex items-center gap-2 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 hover:text-gray-900"><span
@@ -38,11 +36,11 @@
             <li>
                 <hr class="mx-4">
             </li>
-            <li>
+            <!-- <li>
                 <a href="#"
                     class="block flex items-center gap-2 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 hover:text-gray-900"><span
                         class="material-symbols-outlined">archive</span> Archived Notes</a>
-            </li>
+            </li> -->
             <li>
                 <a href="#"
                     class="block flex items-center gap-2 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 hover:text-gray-900"><span
@@ -53,7 +51,6 @@
 </template>
 
 <script>
-
 import { EventBus } from '../eventBus';
 
 export default {
@@ -87,7 +84,13 @@ export default {
         darkOverlay.classList.add('hidden');
         sidebar.classList.add('hidden');
       }, 300);
-    }
+    },
+    openSettings() {
+      this.closeSidebar(); // Tutup sidebar terlebih dahulu
+      setTimeout(() => {
+        EventBus.emit('open-settings-modal'); // Buka modal setelah sidebar tertutup
+      }, 300); // Sesuaikan waktu dengan durasi animasi penutupan sidebar
+    },
   },
   beforeDestroy() {
     EventBus.off('toggle-sidebar', this.openSidebar);
@@ -99,5 +102,4 @@ export default {
     darkOverlay.removeEventListener('click', this.closeSidebar);
   }
 }
-
 </script>

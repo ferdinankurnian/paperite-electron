@@ -19,7 +19,7 @@
             class="sidemenu-item tooltip-trigger h-[40px] rounded-md w-full grid items-center justify-center">
             <span class="material-symbols-outlined">local_activity</span>
           </button> -->
-            <button data-tooltip="Settings"
+            <button data-tooltip="Settings" @click="openSettings"
                 class="sidemenu-item tooltip-trigger toggle-settings h-[40px] rounded-md w-full grid items-center justify-center">
                 <span class="material-symbols-outlined">settings</span>
             </button>
@@ -28,7 +28,14 @@
 </template>
 
 <script>
+import { EventBus } from '../eventBus';
+
 export default {
-    name: 'Sidemenu',
-}
+  name: 'Sidemenu',
+  methods: {
+    openSettings() {
+      EventBus.emit('open-settings-modal');
+    }
+  }
+};
 </script>

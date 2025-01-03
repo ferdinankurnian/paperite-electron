@@ -1,4 +1,5 @@
 <template>
+  <Settings />
   <div class="flex flex-col p-2 gap-2 flex-grow h-full">
     <!-- Navbar -->
     <Navbar />
@@ -31,6 +32,7 @@ import Sidemenu from './components/Sidemenu.vue';
 import Menu from './components/Menu.vue';
 import NoteContent from './components/NoteContent.vue';
 import NoteEditor from './components/NoteEditor.vue';
+import Settings from './components/Settings.vue';
 
 export default {
   components: {
@@ -40,6 +42,7 @@ export default {
     Menu,
     NoteContent,
     NoteEditor,
+    Settings
   },
 };
 
