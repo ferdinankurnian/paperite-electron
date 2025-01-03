@@ -1,33 +1,23 @@
-# paperite-electron
+<br />
+<div align="center">
+  <img src="public/paperiteicon.png" alt="Deskripsi" width="150"/>
+  <h3 align="center">Paperite on Electron</h3>
+  <p align="center">
+    Paperite is just another note-taking app
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">About Paperite</a>
+<!--     ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
+    ·
+    alpha-v0.1
+  </p>
+  <br />
+</div>
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## About Paperite
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+Paperite is just another note-taking app. Built with [Vue.js](https://vuejs.org/) and [Electron](https://www.electronjs.org) to support cross-platform like Windows, macOS, and Linux.
