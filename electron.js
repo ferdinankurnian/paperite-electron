@@ -13,6 +13,7 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 600,
+    icon: path.join(__dirname, 'public/paperiteicon.png'),
     frame: false,
     webPreferences: {
       nodeIntegration: false, // Make sure nodeIntegration is false for security
