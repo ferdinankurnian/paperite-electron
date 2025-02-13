@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+* {
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+button {
+    @apply cursor-pointer;
+}
+
+.material-symbols-outlined {
+    @apply select-none;
+}
+
+.sidemenu .sidemenu-item.active {
+    @apply bg-[#e76127] text-white hover:bg-[#d55923];
+}
+
+.sidemenu .sidemenu-item:hover:not(.active) {
+    @apply hover:bg-[#eeeeee];
+}
+
+.active {
+    @apply hover:bg-[#d55923] bg-[#e76127] text-white;
+}
+
+.settings-menu.active {
+    @apply bg-gray-300 text-gray-900;
+}
